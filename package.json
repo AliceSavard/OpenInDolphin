@@ -1,0 +1,25 @@
+{
+  "name": "open-in-dolphin",
+  "displayName": "Open in Dolphin",
+  "description": "Reveal files in Dolphin file manager",
+  "version": "1.0.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:openInDolphin.reveal"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "openInDolphin.reveal",
+      "title": "Reveal in Dolphin"
+    }],
+    "menus": {
+      "explorer/context": [{
+        "command": "openInDolphin.reveal",
+        "group": "navigation@20"
+      }]
+    }
+  }
+}
